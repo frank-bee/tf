@@ -6,4 +6,4 @@ RUN go get github.com/sl1pm4t/terraform-provider-kubernetes &&\
 # Build image with Kubernetes provider
 FROM hashicorp/terraform:full
 COPY --from=builder /go/bin/terraform-provider-kubernetes /root/.terraform.d/plugins/
-RUN chmod +x /root/.terraform.d/plugins/
+RUN chmod +x /root/.terraform.d/plugins/terraform-provider-kubernetes
